@@ -1,12 +1,13 @@
 /* MJB offline support.
    Pages and files come from the network first, so every update to the site shows at once.
    The saved copy is used only when there is no connection (or it is very slow). */
-const VERSION = 'mjb-v1';
+const VERSION = 'mjb-v2';
 const FONTS = 'mjb-fonts-v1';
 const CORE = [
-  './', 'main.js', 'studio-polish.css', 'studio-ui.js', 'contact.js', 'app.js', 'favicon.svg', 'manifest.webmanifest',
+  './', 'main.js', 'studio-polish.css', 'studio-ui.js', 'contact.js', 'app.js', 'figures.js', 'favicon.svg', 'manifest.webmanifest',
   'img/me-pixel-v1.png', 'img/app-192.png', 'img/apple-touch-icon.png', 'img/favicon-32.png',
-  'vendor/three-r128.min.js', 'vendor/rounded-box-r128.js', 'vendor/lenis-1.1.13.min.js'
+  'vendor/three-r128.min.js', 'vendor/rounded-box-r128.js', 'vendor/lenis-1.1.13.min.js',
+  'vendor/hairline-0.5.1-mjb.js'
 ];
 const HOME = new URL('./', self.location).href;
 

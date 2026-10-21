@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; frame-src 'none'; object-src 'none'; base-uri 'self'; form-action 'self'">
+<meta name="referrer" content="strict-origin-when-cross-origin">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex">
+<meta name="theme-color" content="#FFF4E8">
+<title>الصفحة غير موجودة | MJB</title>
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="/img/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="apple-touch-icon" href="/img/apple-touch-icon.png" sizes="180x180">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Alexandria:wght@500;800&family=IBM+Plex+Sans+Arabic:wght@400;600&family=IBM+Plex+Mono:wght@500&display=swap">
+<style>
+  :root { --bg: #FFF4E8; --ink: #161616; --accent: #FF6B1A; --muted: #5F5850; color-scheme: light; }
+  * { box-sizing: border-box; }
+  html, body { margin: 0; min-height: 100%; background: var(--bg); color: var(--ink); }
+  body { font-family: "IBM Plex Sans Arabic", system-ui, sans-serif; display: grid; place-items: center; min-height: 100vh; min-height: 100svh;
+         padding: max(24px, env(safe-area-inset-top)) 20px max(24px, env(safe-area-inset-bottom)); }
+  main { width: min(100%, 520px); text-align: center; }
+  .code { font: 500 14px/1 "IBM Plex Mono", ui-monospace, monospace; letter-spacing: .08em; color: var(--muted); }
+  h1 { font: 800 clamp(30px, 7vw, 44px)/1.15 Alexandria, "IBM Plex Sans Arabic", sans-serif; margin: 10px 0 8px; }
+  p { margin: 0 auto; max-width: 34ch; line-height: 1.7; color: #2E2A26; }
+  .en { direction: ltr; font-size: 14px; color: var(--muted); margin-top: 4px; }
+  .nf-fig { --hairline-plate: var(--bg); width: min(100%, 320px); aspect-ratio: 5 / 4; margin: 0 auto 6px; }
+  a.home { display: inline-flex; align-items: center; gap: 8px; margin-top: 22px; min-height: 48px; padding: 12px 22px;
+           background: var(--accent); color: var(--ink); text-decoration: none; font: 800 17px/1 Alexandria, sans-serif;
+           border: 2.5px solid var(--ink); border-radius: 14px; box-shadow: 4px 4px 0 var(--ink); transition: transform .15s, box-shadow .15s; }
+  a.home:hover { transform: translate(-2px, -2px); box-shadow: 6px 6px 0 var(--ink); }
+  a.home:focus-visible { outline: 3px solid var(--ink); outline-offset: 3px; }
+  .nf-fig { --hairline-hi: var(--accent); --hairline-edge: var(--ink); --hairline-mid: #8C8379; --hairline-lo: #E6DDD2; --hairline-stroke: 1.1; }
+  @media (prefers-reduced-motion: reduce) { a.home { transition: none; } }
+</style>
+</head>
+<body>
+<main>
+  <div class="nf-fig" data-fig="loupe" aria-hidden="true"></div>
+  <div class="code">404</div>
+  <h1>الصفحة مو موجودة</h1>
+  <p>يمكن الرابط تغيّر أو انكتب غلط.</p>
+  <p class="en">This page does not exist.</p>
+  <a class="home" href="/">ارجع للرئيسية <span aria-hidden="true">←</span></a>
+</main>
+<script type="module" src="/figures.js"></script>
+</body>
+</html>

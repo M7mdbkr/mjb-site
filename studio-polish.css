@@ -589,3 +589,19 @@ html.standalone .get-app, html.standalone .app-sheet { display: none !important;
   html.app-ui .tabbar, html.app-ui .fpager, html.app-ui .app-sheet, html.app-ui .swipe-tip { transition: none; }
   html.app-ui .swipe-tip i { animation: none; }
 }
+
+/* ---------- Line figures (Hairline): drawn in the Studio colours ---------- */
+.svc-fig, .contact-fig, .nf-fig {
+  --hairline-plate: #FFFFFF;
+  --hairline-hi: var(--accent, #FF6B1A);
+  --hairline-edge: var(--ink, #161616);
+  --hairline-mid: #8C8379;
+  --hairline-lo: #E6DDD2;
+  --hairline-stroke: 1.1;
+}
+.svc-fig { width: min(100%, 230px); aspect-ratio: 5 / 4; margin: -4px auto 0; }
+.contact-fig { --hairline-plate: var(--bg, #FFF4E8); width: min(100%, 300px); aspect-ratio: 5 / 4; margin-top: 26px; }
+@media (max-width: 600px) {
+  .svc-fig { width: min(100%, 200px); }
+  .contact-fig { width: min(100%, 240px); margin-inline: auto; }
+}
