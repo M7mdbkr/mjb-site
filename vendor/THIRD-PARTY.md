@@ -6,3 +6,9 @@
 - Saudi flag artwork originally supplied with the portfolio: Twemoji graphics, CC BY 4.0. Attribution remains in the page footer. https://github.com/twitter/twemoji and https://creativecommons.org/licenses/by/4.0/
 
 Portrait: generated from the user-supplied reference photograph for MJB.
+
+## Hairline 0.5.1
+
+- File: `hairline-0.5.1-mjb.js` (a smaller build with only the figures this site uses: relay, exploded, router, phone, query, plug, loupe)
+- Source: https://github.com/lucasmarkes/hairline (npm `@lucasmarkes/hairline`)
+- License: MIT, Copyright (c) 2026 Lucas Marques. Full text in `HAIRLINE-LICENSE.txt`.
