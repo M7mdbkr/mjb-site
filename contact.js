@@ -1,4 +1,4 @@
-/* MJB contact: validate, then send the request to the owner's email through FormSubmit.
+/* MJB contact: validate, then save the request in the site's own database (Cloudflare D1, through /api/contact).
    If sending fails, the visitor gets a ready message to send from their own email app or to copy.
    WhatsApp buttons show only when a number is set below. */
 (() => {
@@ -6,7 +6,7 @@
   const form = document.getElementById('req');
   if (!form) return;
   const OWNER = 'mohammadbakerwork@gmail.com';
-  const ENDPOINT = 'https://formsubmit.co/ajax/' + OWNER;
+  const ENDPOINT = '/api/contact';
   // WhatsApp number in international format, digits only (for example 9665XXXXXXXX). Leave empty to hide the WhatsApp buttons.
   const WA = '';
 
@@ -130,18 +130,15 @@
       const email = value('email');
       const body = {
         name: value('name'),
-        email: email || '-',
-        mobile: phone(value('phone')) || '-',
+        email: email,
+        mobile: phone(value('phone')),
         service: `${pick('service', false)} · ${pick('service', true)}`,
         budget: budgetOf(true),
         timeline: pick('when', true),
         details: value('details'),
-        language: arabic() ? 'العربية' : 'English',
-        _subject: `طلب مشروع جديد · MJB — ${pick('service', true)}`,
-        _template: 'table',
-        _captcha: 'false'
+        language: arabic() ? 'ar' : 'en',
+        website: form.elements.website.value
       };
-      if (email) body._replyto = email;
       const res = await fetch(ENDPOINT, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', Accept: 'application/json' },
@@ -149,7 +146,7 @@
         signal: ctrl ? ctrl.signal : undefined
       });
       const data = await res.json().catch(() => ({}));
-      return res.ok && (data.success === true || data.success === 'true');
+      return res.ok && data.success === true;
     } catch (_) {
       return false;
     } finally {
